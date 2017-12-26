@@ -1,6 +1,5 @@
 package com.udacity.gradle.builditbigger;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -13,19 +12,23 @@ import android.widget.Toast;
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
 import com.omni.mylibrary.JokesActivity;
-import com.udacity.gradle.jokes.Joker;
 import com.udacity.gradle.builditbigger.backend.myApi.MyApi;
+import com.udacity.gradle.jokes.Joker;
+ import com.google.api.client.googleapis.services.AbstractGoogleClientRequest;
+import com.google.api.client.googleapis.services.GoogleClientRequestInitializer;
+
 import java.io.IOException;
 
 
 public class MainActivity extends AppCompatActivity {
 
+    String joke = "" ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        new JokesAsyncTask().execute();
+
     }
 
 
@@ -52,14 +55,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tellJoke(View view){
-        Joker joker = new Joker();
-        Toast.makeText(this,joker.getJoke() , Toast.LENGTH_SHORT).show();
+        new JokesAsyncTask().execute();
     }
 
     public void launchLibraryActivity(View view) {
         Intent myIntent = new Intent(this, JokesActivity.class);
-        Joker joker = new Joker();
-        myIntent.putExtra("Joke" ,joker.getJoke());
+        myIntent.putExtra("Joke" ,joke);
         startActivity(myIntent);
     }
 
@@ -70,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         protected String doInBackground(Void... voids) {
             if(myApiService == null){
                 MyApi.Builder builder = new MyApi.Builder(AndroidHttp.newCompatibleTransport(), new AndroidJsonFactory(), null)
-                        .setRootUrl("http://192.168.10.5:8080/_ah/api");
+                        .setRootUrl("“http://10.0.2.2:8080/_ah/api/");
 
                 myApiService = builder.build();
             }
@@ -87,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String result) {
+            joke =result;
             Toast.makeText(MainActivity.this, result, Toast.LENGTH_LONG).show();
         }
     }

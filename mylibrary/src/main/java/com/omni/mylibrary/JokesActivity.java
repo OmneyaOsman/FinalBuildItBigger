@@ -10,4 +10,6 @@ public class JokesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jokes);
     }
+
+
 }

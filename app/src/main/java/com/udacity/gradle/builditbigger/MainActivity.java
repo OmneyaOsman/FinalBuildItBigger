@@ -13,9 +13,6 @@ import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
 import com.omni.mylibrary.JokesActivity;
 import com.udacity.gradle.builditbigger.backend.myApi.MyApi;
-import com.udacity.gradle.jokes.Joker;
- import com.google.api.client.googleapis.services.AbstractGoogleClientRequest;
-import com.google.api.client.googleapis.services.GoogleClientRequestInitializer;
 
 import java.io.IOException;
 
@@ -77,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             try{
-                return myApiService.sayAJoke().execute.getData();
+                return myApiService.sayAJoke().execute().getData();
             } catch (IOException e){
                 return e.getMessage();
             }

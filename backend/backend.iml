@@ -14,7 +14,7 @@
     </facet>
     <facet type="app-engine-gradle" name="App Engine Gradle">
       <configuration>
-        <option name="HTTP_ADDRESS" value="localhost" />
+        <option name="HTTP_ADDRESS" value="0.0.0.0" />
         <option name="HTTP_PORT" value="8080" />
         <option name="WAR_DIR" value="E:\AndroidWorld\NanoDegree\Nano Projects\ud867-master\FinalProject\backend\build\exploded-app" />
         <option name="WEB_APP_DIR" value="E:\AndroidWorld\NanoDegree\Nano Projects\ud867-master\FinalProject\backend\src\main\webapp" />
@@ -43,18 +43,6 @@
     <orderEntry type="library" exported="" scope="PROVIDED" name="appengine-endpoints-1.9.59" level="project" />
     <orderEntry type="library" exported="" scope="PROVIDED" name="appengine-endpoints-deps-1.9.59" level="project" />
     <orderEntry type="library" exported="" scope="PROVIDED" name="servlet-api-2.5" level="project" />
-    <orderEntry type="library" exported="" scope="PROVIDED" name="google-api-client-1.23.0" level="project" />
-    <orderEntry type="library" exported="" scope="PROVIDED" name="google-http-client-android-1.23.0" level="project" />
     <orderEntry type="library" exported="" scope="PROVIDED" name="appengine-api-1.0-sdk-1.9.59" level="project" />
-    <orderEntry type="library" exported="" scope="PROVIDED" name="google-oauth-client-1.23.0" level="project" />
-    <orderEntry type="library" exported="" scope="PROVIDED" name="google-http-client-jackson2-1.23.0" level="project" />
-    <orderEntry type="library" exported="" scope="PROVIDED" name="guava-jdk5-17.0" level="project" />
-    <orderEntry type="library" exported="" scope="PROVIDED" name="google-http-client-1.23.0" level="project" />
-    <orderEntry type="library" exported="" scope="PROVIDED" name="jsr305-1.3.9" level="project" />
-    <orderEntry type="library" exported="" scope="PROVIDED" name="jackson-core-2.1.3" level="project" />
-    <orderEntry type="library" exported="" scope="PROVIDED" name="httpclient-4.0.1" level="project" />
-    <orderEntry type="library" exported="" scope="PROVIDED" name="httpcore-4.0.1" level="project" />
-    <orderEntry type="library" exported="" scope="PROVIDED" name="commons-logging-1.1.1" level="project" />
-    <orderEntry type="library" exported="" scope="PROVIDED" name="commons-codec-1.3" level="project" />
   </component>
 </module>

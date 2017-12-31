@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         protected String doInBackground(Void... voids) {
             if(myApiService == null){
                 MyApi.Builder builder = new MyApi.Builder(AndroidHttp.newCompatibleTransport(), new AndroidJsonFactory(), null)
-                        .setRootUrl("“http://10.0.2.2:8080/_ah/api/");
+                        .setRootUrl("http://10.0.2.2:8080/_ah/api/");
 
                 myApiService = builder.build();
             }

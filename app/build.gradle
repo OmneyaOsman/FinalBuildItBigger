@@ -51,7 +51,7 @@ dependencies {
 
 
     testCompile 'junit:junit:4.12'
-    implementation 'com.google.android.gms:play-services-ads:11.4.0'
+    freeCompile 'com.google.android.gms:play-services-ads:11.4.0'
 
     implementation project(':javaJokes')
     implementation project(':mylibrary')

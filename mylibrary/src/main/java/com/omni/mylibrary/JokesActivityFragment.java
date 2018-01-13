@@ -15,12 +15,11 @@ import android.widget.TextView;
 
 public class JokesActivityFragment extends Fragment {
 
-    private TextView displayJokeTv ;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView =inflater.inflate(R.layout.jokes_activity_fragment , container , false);
-        displayJokeTv = rootView.findViewById(R.id.display_text_view);
+        TextView displayJokeTv = rootView.findViewById(R.id.display_text_view);
         Intent intent = getActivity().getIntent();
         if(intent.hasExtra("Joke"))
             displayJokeTv.setText(intent.getStringExtra("Joke"));

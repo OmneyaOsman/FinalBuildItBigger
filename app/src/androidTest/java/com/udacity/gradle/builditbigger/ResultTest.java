@@ -13,6 +13,9 @@ import org.junit.runner.RunWith;
 
 import java.util.concurrent.ExecutionException;
 
+import static org.hamcrest.Matchers.is;
+import static org.junit.Assert.assertThat;
+
 /**
  * Created by Omni on 06/01/2018.
  */
@@ -41,10 +44,10 @@ public class ResultTest  {
     }
 
     @Test
-    public void testNonEmptyText(){
+    public void testNonEmptyText() {
         MainActivity.FinalAsyncTask1 task1 = new MainActivity.FinalAsyncTask1(mainActivityActivityTestRule.getActivity());
         task1.execute();
-        String result =null;
+        String result = null;
         try {
             result = task1.get();
         } catch (InterruptedException e) {
@@ -52,7 +55,8 @@ public class ResultTest  {
         } catch (ExecutionException e) {
             e.printStackTrace();
         }
-        assert result!=null ;
+        assertThat(result.equals("This is totally a funny joke"), is(true));
+
     }
 
 

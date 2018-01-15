@@ -21,8 +21,8 @@ public class JokesActivityFragment extends Fragment {
         View rootView =inflater.inflate(R.layout.jokes_activity_fragment , container , false);
         TextView displayJokeTv = rootView.findViewById(R.id.display_text_view);
         Intent intent = getActivity().getIntent();
-        if(intent.hasExtra("Joke"))
-            displayJokeTv.setText(intent.getStringExtra("Joke"));
+        if(intent.hasExtra("joke"))
+            displayJokeTv.setText(intent.getStringExtra("joke"));
         return  rootView ;
     }
 
